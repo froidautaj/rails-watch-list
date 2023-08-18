@@ -1,9 +1,10 @@
-class Bookmark < ApplicationRecord
-  belongs_to :movies
-  belongs_to :lists
+# frozen_string_literal: true
 
-  validates :movies, presence: true
-  validates :lists, presence: true
+class Bookmark < ApplicationRecord
+  belongs_to :movie
+  belongs_to :list
+
+  validates_presence_of :movie, :list
   validates :comment, presence: true, length: { minimum: 6 }
-  validates_uniqueness_of :movies_id, { scope: :lists_id }
+  validates_uniqueness_of :movie_id, { scope: :list_id }
 end

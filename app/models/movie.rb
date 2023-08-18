@@ -1,6 +1,8 @@
-class Movie < ApplicationRecord
-  has_many :bookmarks, dependent: :destroy
+# frozen_string_literal: true
 
-  validates :overview, presence: true
+class Movie < ApplicationRecord
+  has_many :bookmarks
+
+  validates_presence_of :overview
   validates :title, presence: true, uniqueness: true
 end
