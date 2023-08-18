@@ -51,6 +51,7 @@ gem 'font-awesome-sass', '~> 6.1'
 gem 'sassc-rails'
 gem 'simple_form'
 gem "dotenv-rails"
+gem "cloudinary"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
